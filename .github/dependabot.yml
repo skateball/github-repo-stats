@@ -27,3 +27,10 @@ updates:
     open-pull-requests-limit: 5
     # Update for Dockerfiles
     
+  - package-ecosystem: "github-actions" # For GitHub Actions
+    directory: ".github/workflows" # Location of the GitHub Actions workflows
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "chore-gha" # Using "chore" for GitHub Actions updates
+    open-pull-requests-limit: 5
