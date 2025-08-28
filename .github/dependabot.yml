@@ -1,0 +1,29 @@
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/" # Location of the requirements files
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "chore-ci"
+    open-pull-requests-limit: 5
+    # Update for requirements-ci.txt
+
+  - package-ecosystem: "pip"
+    directory: "/" # Same directory for the second requirements file
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "chore-fa"
+    open-pull-requests-limit: 5
+    # Update for requirements-fa.txt
+
+  - package-ecosystem: "docker" # For Dockerfiles
+    directory: "/" # Location of the Dockerfiles
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "chore-docker" # Using "chore" for Dockerfile updates
+    open-pull-requests-limit: 5
+    # Update for Dockerfiles
+    
